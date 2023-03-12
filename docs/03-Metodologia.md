@@ -66,7 +66,7 @@ Para o acompanhamento e organização do projeto, a equipe de desenvolvimento re
 - `To do`: tarefas a serem feitas
 - `In progress`: tarefas que estão sendo feitas
 - `Done`: tarefas já realizadas
-<img src="img/BACKLOGS.png"/> 
+<img src="img/BACKLOGS1.png"/> 
 
 
 ### Ferramentas
