@@ -60,15 +60,14 @@ Exemplificação: A equipe utiliza metodologias ágeis, tendo escolhido o Scrum 
 
 ### Processo
 
-Coloque  informações sobre detalhes da implementação do Scrum seguido pelo grupo. O grupo deverá fazer uso do recurso de gerenciamento de projeto oferecido pelo GitHub, que permite acompanhar o andamento do projeto, a execução das tarefas e o status de desenvolvimento da solução.
- 
-> **Links Úteis**:
-> - [Planejamento e Gestáo Ágil de Projetos](https://pucminas.instructure.com/courses/87878/pages/unidade-2-tema-2-utilizacao-de-ferramentas-para-controle-de-versoes-de-software)
-> - [Sobre quadros de projeto](https://docs.github.com/pt/issues/organizing-your-work-with-project-boards/managing-project-boards/about-project-boards)
-> - [Project management, made simple](https://github.com/features/project-management/)
-> - [Sobre quadros de projeto](https://docs.github.com/pt/github/managing-your-work-on-github/about-project-boards)
-> - [Como criar Backlogs no Github](https://www.youtube.com/watch?v=RXEy6CFu9Hk)
-> - [Tutorial Slack](https://slack.com/intl/en-br/)
+Para o acompanhamento e organização do projeto, a equipe de desenvolvimento realizou a criação de um 'BackLog' a partir das ferramentas oferecidas pelo Github, sendo possível realizar a distribuição das tarefas e visualizar os status de cada uma.<br>
+
+- `Produto backlog`: todas as tarefas
+- `To do`: tarefas a serem feitas
+- `In progress`: tarefas que estão sendo feitas
+- `Done`: tarefas já realizadas
+<img src="img/BACKLOGS.png"/> 
+
 
 ### Ferramentas
 
