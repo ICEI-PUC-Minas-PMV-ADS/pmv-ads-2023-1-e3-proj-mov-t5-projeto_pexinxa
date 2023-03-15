@@ -1,4 +1,12 @@
 # Plano de Testes de Software
+
+## 1 - Introdução
+
+Este documento descreve os requisitos a testar e os  tipos de testes definidos para cada iteração.
+
+## 2 - Casos de Teste
+Está seção contem os casos de teste.
+
  
 | **Caso de Teste** 	| **CT-01 – Cadastrar usuário** 	|
 |:---:	|:---:	|
