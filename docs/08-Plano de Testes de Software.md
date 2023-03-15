@@ -2,7 +2,7 @@
 
 ## 1 - Introdução
 
-Este documento descreve os requisitos a testar e os  tipos de testes definidos para cada iteração.
+Este documento descreve os requisitos a serem testados e os testes a serem realizados.
 
 ## 2 - Casos de Teste
 Está seção contem os casos de teste.
