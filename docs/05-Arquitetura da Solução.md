@@ -6,6 +6,15 @@ Definição de como o software é estruturado em termos dos componentes que faze
 
 ![Arquitetura da Solução](img/02-mob-arch.png)
 
+
+## Processos de Negócios
+
+O processo de negócio precisar ser representado para que seja melhor entendido pelos envolvidos em seu desenvolvimento. Na modelagem de processo de negócio a seguir foi utilizada a notação BPMN que contém um conjunto de símbolos, como tarefas, eventos, subprocessos e a maneira como o fluxo de atividades percorre o caminho do processo.
+
+![processodenegocio](https://user-images.githubusercontent.com/80654018/226068977-c27009cb-69f3-4e90-8aed-e4758885dbea.png)
+
+
+
 ## Diagrama de Classes
 
 O diagrama de classes ilustra graficamente como será a estrutura do software, e como cada uma das classes da sua estrutura estarão interligadas. Essas classes servem de modelo para materializar os objetos que executarão na memória.
