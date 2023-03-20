@@ -6,14 +6,11 @@ Definição de como o software é estruturado em termos dos componentes que faze
 
 ![Arquitetura da Solução](img/02-mob-arch.png)
 
-
 ## Processos de Negócios
 
 O processo de negócio precisar ser representado para que seja melhor entendido pelos envolvidos em seu desenvolvimento. Na modelagem de processo de negócio a seguir foi utilizada a notação BPMN que contém um conjunto de símbolos, como tarefas, eventos, subprocessos e a maneira como o fluxo de atividades percorre o caminho do processo.
 
 ![processodenegocio](https://user-images.githubusercontent.com/80654018/226068977-c27009cb-69f3-4e90-8aed-e4758885dbea.png)
-
-
 
 ## Diagrama de Classes
 
@@ -35,14 +32,16 @@ O Modelo ER representa através de um diagrama como as entidades (coisas, objeto
 ## Esquema Relacional
 
 O Esquema Relacional corresponde à representação dos dados em tabelas juntamente com as restrições de integridade e chave primária.
- 
+
 As referências abaixo irão auxiliá-lo na geração do artefato “Esquema Relacional”.
 
 > - [Criando um modelo relacional - Documentação da IBM](https://www.ibm.com/docs/pt-br/cognos-analytics/10.2.2?topic=designer-creating-relational-model)
 
 ## Modelo Físico
 
-Entregar um arquivo banco.sql contendo os scripts de criação das tabelas do banco de dados. Este arquivo deverá ser incluído dentro da pasta src\bd.
+Os scripts da criação das tabelas do banco se encontram na pasta src\bd
+
+Caminho: https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e3-proj-mov-t5-projeto_pexinxa/blob/main/src/bd/banco.sql
 
 ## Tecnologias Utilizadas
 
