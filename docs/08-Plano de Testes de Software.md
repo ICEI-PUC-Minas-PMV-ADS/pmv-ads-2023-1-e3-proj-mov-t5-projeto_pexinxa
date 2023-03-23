@@ -2,10 +2,10 @@
 
 ## 1 - Introdução
 
-Este documento descreve os requisitos a serem testados e os testes a serem realizados.
+Este documento tem como objetivo apresentar os requisitos que precisam ser testados e os testes que serão realizados para garantir a qualidade do software.
 
 ## 2 - Casos de Teste
-Está seção contem os casos de teste.
+Esta seção apresenta a descrição detalhada dos casos de teste que serão aplicados ao software para verificar seu funcionamento correto e sua aderência aos requisitos definidos.
 
  
 | **Caso de Teste** 	| **CT-01 – Cadastrar usuário** 	|
