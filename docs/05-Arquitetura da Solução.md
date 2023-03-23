@@ -61,12 +61,67 @@ Explique como a hospedagem e o lançamento da plataforma foi feita.
 
 ## Qualidade de Software
 
-Conceituar qualidade de fato é uma tarefa complexa, mas ela pode ser vista como um método gerencial que através de procedimentos disseminados por toda a organização, busca garantir um produto final que satisfaça às expectativas dos stakeholders.
+A qualidade de software é um conjunto de características que as aplicações devem possuir para que o projeto cumpra todos os seus requisitos e atendam, de uma melhor maneira possível, a necessidades dos usuários.
+Essas normas foram adotadas inicialmente pela ISO/IEC 9126, de 1991, e que foram atualizadas para a ISO/IEC 25010, de 2011. Essa última define a qualidade para produtos de software em 8 características e 30 subcaracterísticas, que são:
 
-No contexto de desenvolvimento de software, qualidade pode ser entendida como um conjunto de características a serem satisfeitas, de modo que o produto de software atenda às necessidades de seus usuários. Entretanto, tal nível de satisfação nem sempre é alcançado de forma espontânea, devendo ser continuamente construído. Assim, a qualidade do produto depende fortemente do seu respectivo processo de desenvolvimento.
+| Característica | Subcaracterística | Definição|
+| -------------- | ----------------- | -------- |
+| Adequação Funcional |   | Mede o grau em que o produto disponibiliza funções que satisfazem necessidades estabelecidas e implicadas quando o produto é usado sob condições especificadas |
+|    | Integridade Funcional   | O software possibilita executar as funções que são apropriadas, ou seja, as entradas e saídas de dados necessárias para o usuário atingir seus objetivos são possíveis?  |
+|    | Correção Funcional   | Também denominada acurácia, essa sub característica avalia o quanto o software gera dados e consultas corretos e precisos de acordo com sua definição |
+|    | Pertinência Funcional | Esta sub característica indica qual o grau em que as funções do sistema facilitam a realização de tarefas e objetivos para os quais o sistema foi especificado |
+| Eficiência de Desempenho   |   | Trata da otimização do uso de recursos de tempo e espaço   |
+|    | Comportamento Temporal | Mede o tempo que o software leva para processar suas funções   |
+|    | Utilização De Recursos | Normalmente associada a espaço de armazenamento ou memória, também pode ser associada a outros recursos necessários como, por exemplo, banda de transmissão de rede  |
+|    | Capacidade | Avalia o grau em que os limites máximos do produto atendem aos requisitos |
+| Compatibilidade  |   | Avalia o grau em que dois ou mais sistemas ou componentes podem trocar informação e/ou realizar suas funções requeridas enquanto compartilham o mesmo ambiente de hardware e software   |
+|    | Interoperabilidade | Avalia o grau no qual o software é capaz de interagir com outros sistemas com os quais se espera que ele interaja |
+|    | Coexistência  | Avalia o grau no qual o produto pode desempenhar as funções requeridas eficientemente enquanto compartilha ambiente e recursos comuns com outros produtos, sem impacto negativo nos outros produtos  |
+| Usabilidade   |   | Avalia o grau no qual o produto tem atributos que permitem que seja entendido, aprendido, usado e que seja atraente ao usuário, quando usado sob condições especificadas |
+|    | Adequação ao Reconhecimento | grau em que os usuários reconhecem que o produto é apropriado para suas necessidades |
+|    | Apreensibilidade | Tem relação com o grau de facilidade que um usuário tem em entender os conceitos chave do software e assim tornar-se competente no seu uso   |
+|    | Operacionalidade | Avalia o grau no qual o produto é fácil de operar e controlar |
+|    | Proteção ao Erros | Avalia o grau em que o produto foi projetado para evitar que o usuário cometa erros   |
+|    | Estética da Interface | Avalia o grau em que a interface com usuário proporciona uma interação satisfatória |
+|    | Acessibilidade | Avalia o grau em que o produto foi projetado para atender pessoas com características e capacidades diferenciadas |
+| Confiabilidade   |   | O software, ao longo do tempo, se mantém com um comportamento consistente com o esperado |
+|    | Maturidade | Medida da frequência com que um software apresenta defeitos |
+|    | Tolerância a Falhas | A forma como o software reage quando em situação anômala   |
+|    | Disponibilidade | O quanto o software está operacional e disponível para uso quando se tornar necessário |
+|    | Recuperabilidade | Capacidade de recuperar dados e colocar-se novamente em operação após uma situação de desastre |
+| Segurança   |   | Avalia o grau em que as funções e dados são protegidos de acesso não autorizado e o grau em que são disponibilizados para acesso autorizado   |
+|    | Confidencialidade |  Avalia o grau em que as informações e funções do sistema estejam acessíveis por quem tenha a devida autorização para isso  |
+|    | Integridade | Avalia o grau em que os dados e funções do sistema são protegidos contra acesso por pessoas ou sistemas não autorizados |
+|    | Não Repúdio | Avalia o grau em que o sistema permite constatar que ações ou acessos foram efetivamente feitos, de forma que não possam ser posteriormente negados |
+|    | Responsabilização | Avalia o grau em que as ações realizadas por uma pessoa ou sistema podem ser rastreadas de forma a comprovar que foram efetivamente realizadas por esta pessoa ou sistema  |
+| Manutenibilidade   |   | Mede a facilidade de se realizar alterações no software para sua evolução, ou de detectar e corrigir erros   |
+|    | Modularidade | Avalia o grau em que o sistema é subdividido em partes lógicas coesas, de forma que mudanças em uma dessas partes tenha impacto mínimo nas outras  |
+|    | Reusabilidade | Avalia o grau em que partes do sistema podem potencialmente ser usadas para construir outros sistemas  |
+|    | Analisabilidade | Um sistema é analisável quando permite encontrar defeitos (depurar) facilmente quando erros ou falhas ocorrem   |
+|    | Modificabilidade |  Tem relação com a facilidade que o sistema oferece para que erros sejam corrigidos quando detectados, sem que as modificações introduzam novos defeitos, ou degradando sua organização interna |
+|    | Testabilidade | Mede a facilidade de se realizar testes de regressão  |
+| Portabilidade   |   | Avalia o grau em que o software pode ser efetivamente e eficientemente transferido de um ambiente de hardware ou software para outro |
+|    | Adaptabilidade   | Avalia o quanto é fácil adaptar o software a outros ambientes sem a necessidade de aplicar ações ou meios além daqueles fornecidos com o próprio software   |
+|    | Facilidade de ser Instalado | Avalia a facilidade de se instalar o software   |
+|    | Capacidade para Substituir | Avalia o grau em que o sistema pode substituir outro no mesmo ambiente e com os mesmos objetivos   |
 
-A norma internacional ISO/IEC 25010, que é uma atualização da ISO/IEC 9126, define oito características e 30 subcaracterísticas de qualidade para produtos de software.
-Com base nessas características e nas respectivas sub-características, identifique as sub-características que sua equipe utilizará como base para nortear o desenvolvimento do projeto de software considerando-se alguns aspectos simples de qualidade. Justifique as subcaracterísticas escolhidas pelo time e elenque as métricas que permitirão a equipe avaliar os objetos de interesse.
+Para o nosso trabalho, vamos focar nas seguintes características para a construção da nossa aplicação:
+
+| Característica | Subcaracterística | Definição|
+| -------------- | ----------------- | -------- |
+| Adequação Funcional |   | Mede o grau em que o produto disponibiliza funções que satisfazem necessidades estabelecidas e implicadas quando o produto é usado sob condições especificadas |
+|    | Integridade Funcional   | O software possibilita executar as funções que são apropriadas, ou seja, as entradas e saídas de dados necessárias para o usuário atingir seus objetivos são possíveis?  |
+|    | Correção Funcional   | Também denominada acurácia, essa sub característica avalia o quanto o software gera dados e consultas corretos e precisos de acordo com sua definição |
+|    | Pertinência Funcional | Esta sub característica indica qual o grau em que as funções do sistema facilitam a realização de tarefas e objetivos para os quais o sistema foi especificado |
+| Usabilidade   |   | Avalia o grau no qual o produto tem atributos que permitem que seja entendido, aprendido, usado e que seja atraente ao usuário, quando usado sob condições especificadas |
+|    | Adequação ao Reconhecimento | grau em que os usuários reconhecem que o produto é apropriado para suas necessidades |
+|    | Apreensibilidade | Tem relação com o grau de facilidade que um usuário tem em entender os conceitos chave do software e assim tornar-se competente no seu uso   |
+|    | Operacionalidade | Avalia o grau no qual o produto é fácil de operar e controlar |
+|    | Proteção ao Erros | Avalia o grau em que o produto foi projetado para evitar que o usuário cometa erros   |
+|    | Estética da Interface | Avalia o grau em que a interface com usuário proporciona uma interação satisfatória |
+|    | Acessibilidade | Avalia o grau em que o produto foi projetado para atender pessoas com características e capacidades diferenciadas |
+| Portabilidade   |   | Avalia o grau em que o software pode ser efetivamente e eficientemente transferido de um ambiente de hardware ou software para outro |
+|    | Facilidade de ser Instalado | Avalia a facilidade de se instalar o software   |
 
 
 > **Links Úteis**:
