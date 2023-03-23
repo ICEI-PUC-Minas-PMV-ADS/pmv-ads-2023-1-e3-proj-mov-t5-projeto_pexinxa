@@ -19,7 +19,7 @@ Para todas as tarefas, o usuário deve deixar um comentário a respeito das suas
 
 |ID| TAREFAS                                            |
 |--|-------------------------------------------------------|
-|T-01| Entre no app e se cadastrar; |
+|T-01| Entre no app e se cadastre; |
 |T-02| Realize autenticação no sistema com suas credências de acesso obtidas no cadastro; |
 |T-03| Acesse a área de Perfil e atualize seus dados; |
 |T-04| Na tela principal, veja o catálogo de produtos; |
