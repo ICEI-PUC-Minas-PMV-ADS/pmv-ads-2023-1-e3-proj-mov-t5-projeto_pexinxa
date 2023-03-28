@@ -227,31 +227,37 @@ Com base na análise das personas forma identificadas as seguintes histórias de
 
 ### Análise da Situação Atual
 
-Apresente aqui os problemas existentes que viabilizam sua proposta. Apresente o modelo do sistema como ele funciona hoje. Caso sua proposta seja inovadora e não existam processos claramente definidos, apresente como as tarefas que o seu sistema pretende implementar são executadas atualmente, mesmo que não se utilize tecnologia computacional. 
+Algumas pessoas vendem produtos artesanais ou industrializados somente na sua região, pois ela não tem um sistema de venda online. Os vendedores tem que encontrar um local para expor os seus produtos e os compradores tem que “achar” o vendedor aonde ele está, pois muitos não possui um local fixo, como uma loja.
+Isso faz com que a venda desses produtos seja prejudicada por falta de viabilidade e quem está comprando pode perder a oportunidade de comprar um produto mais bem trabalhado e/ou personalizado, do que os mesmos produtos vendidos em lojas onde a produção é em massa.
 
 ### Descrição Geral da Proposta
 
-Apresente aqui uma descrição da sua proposta abordando seus limites e suas ligações com as estratégias e objetivos do negócio. Apresente aqui as oportunidades de melhorias.
+A nossa proposta é ajudar esses vendedores a ter uma plataforma online onde eles podem expor os seus produtos para qualquer pessoa que possua a aplicação. Isso fará com que o vendedor tenha um alcance maior de pessoas interessadas nos seus produtos. Os compradores terão uma maios variedade de produtos feitos artesanalmente ou com um processo industrial mais simples que se diferencie da qualidade dos produtos feitos em larga escala.
 
-### Processo 1 – NOME DO PROCESSO
+### Processo 1 – MODELAGEM AS IS
 
-Apresente aqui o nome e as oportunidades de melhorias para o processo 1. Em seguida, apresente o modelo do processo 1, descrito no padrão BPMN. 
+O AS-IS é a situação atual dos processos, ou seja, como os processos funcionam hoje. Sem realizar nenhuma análise crítica e sem discutir se o processo está bom ou ruim. 
 
-![Processo 1](img/02-bpmn-proc1.png)
+![Modelagem As Is](img/AsIs.png)
 
-### Processo 2 – NOME DO PROCESSO
+### Processo 2 –  MODELAGEM TO BE - APLICATIVO PEXINXA
 
-Apresente aqui o nome e as oportunidades de melhorias para o processo 2. Em seguida, apresente o modelo do processo 2, descrito no padrão BPMN.
-
-![Processo 2](img/02-bpmn-proc2.png)
+O TO-BE é o processo futuro, ou seja, ele é o processo melhorado, aquele processo que queremos que a empresa venha a seguir. Ele é o processo onde as melhorias estão sendo implementadas.
+  
+![Modelagem To Be](img/ToBe.png)
 
 ## Indicadores de Desempenho
 
 Apresente aqui os principais indicadores de desempenho e algumas metas para o processo. Atenção: as informações necessárias para gerar os indicadores devem estar contempladas no diagrama de classe. Colocar no mínimo 5 indicadores. 
+  
+| indicador | Objetivos | Descrição | Cálculo | Fonte de dados | Perspectiva|
+| ------------ |------------- |-------------- |----------- |--------------------- |--------------- |
+| Compras Efetuadas | Melhorar a taxa de compras | Mede a quantidade de compras| | Tabela de compras | Cliente |
+| Anunciantes | Melhorar a quantidade de anunciantes | Mede a quantidade de vendedores | | Tabela Vendedor | Cliente |
+| Usuários | Verificar se o App tem uma boa aceitação | Mede a quantidade de novos usuários | | Tabela usuários | Cliente |
+| Produtos Cadastrados| Verificar a quantidade de produtos à venda | Mede quantos tipos de produto estão disponíveis para os usuários| | Tabela Produtos | Cliente|
+| Cadastro de produtos não finalizados | Verificar a quantidade de cadastros de produtos que não foram efetivados | Mede a facilidade de uso da aplicação pelos vendedores | | Tabela Produtos | Processos Internos |
 
-Usar o seguinte modelo: 
-
-![Indicadores de Desempenho](img/02-indic-desemp.png)
   
 Obs.: todas as informações para gerar os indicadores devem estar no diagrama de classe a ser apresentado a posteriori. 
 
