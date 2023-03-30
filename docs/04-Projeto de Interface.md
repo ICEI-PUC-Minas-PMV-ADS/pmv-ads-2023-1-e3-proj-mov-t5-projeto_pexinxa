@@ -20,7 +20,27 @@ As referências abaixo irão auxiliá-lo na geração do artefato “Diagramas d
 
 ## Wireframes
 
-![Exemplo de Wireframe](img/wireframe-example.png)
+Abaixo serão apresentados os modelos wireframes do projeto nas seguintes divisões, Cadastro/Login, Dados do perfil/Edição do perfil, Compra de produto e a criação de um anúncio e edição do mesmo.
+
+1 - Na imagem a seguir, será ilustrado as passagens de tela na criação de uma nova conta e o login para acesso ao app.
+
+<img src="img/cadastro.png"/>
+
+2 - A seguir, será demonstrado os dados presentes no perfil do usuário comprador e as edição de dados pessoais, logo após os dados presentes na tela "Meus pedidos".
+
+<img src="img/editar _perfil.png"/>
+<img src="img/meus_pedidos.png"/>
+
+3- A seguir, será demonstrado a finalização de compra de um produto.
+
+<img src="img/pagamento.png"/>
+
+4 - A seguir será demonstrado o perfil do usuário vendedor e a ferramenta de adição de anúncio/edição do mesmo.
+
+<img src="img/perfil_vendedor.png"/>
+<img src="img/meus_produtos.png"/>
+
+
 
 São protótipos usados em design de interface para sugerir a estrutura de um site web e seu relacionamentos entre suas páginas. Um wireframe web é uma ilustração semelhante do layout de elementos fundamentais na interface.
  
