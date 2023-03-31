@@ -1,10 +1,8 @@
 # Arquitetura da Solução
 
-<span style="color:red">Pré-requisitos: <a href="3-Projeto de Interface.md"> Projeto de Interface</a></span>
-
 Definição de como o software é estruturado em termos dos componentes que fazem parte da solução e do ambiente de hospedagem da aplicação.
 
-![image](https://user-images.githubusercontent.com/80654018/229249025-2af328b0-13a6-423b-9a9a-716eaa675c27.png)
+![image](https://user-images.githubusercontent.com/80654018/229249090-3f6e0b34-a4cd-4706-bb7d-ead96e0df860.png)
 
 ## Processos de Negócios
 
@@ -18,8 +16,7 @@ O diagrama de classes ilustra graficamente como será a estrutura do software, e
 
 ![image](https://user-images.githubusercontent.com/80654018/226074450-9449f349-f7a4-4331-a6b4-234741d12898.png)
 
-> - [Diagramas de Classes - Documentação da IBM](https://www.ibm.com/docs/pt-br/rational-soft-arch/9.6.1?topic=diagrams-class)
-> - [O que é um diagrama de classe UML? | Lucidchart](https://www.lucidchart.com/pages/pt/o-que-e-diagrama-de-classe-uml)
+
 
 ## Modelo ER
 
@@ -27,7 +24,7 @@ O Modelo ER representa através de um diagrama como as entidades (coisas, objeto
 
 ![image](https://user-images.githubusercontent.com/80654018/226076343-b7f6de5a-58be-4259-8201-29820087995f.png)
 
-> - [Como fazer um diagrama entidade relacionamento | Lucidchart](https://www.lucidchart.com/pages/pt/como-fazer-um-diagrama-entidade-relacionamento)
+
 
 ## Esquema Relacional
 
@@ -50,12 +47,6 @@ As tecnologias utilizadas foram: Lucidchart para criação de fluxogramas e diag
 
 A hospedagem do projeto está sendo feita no "GitHub", para o banco de dados utiliza-se o "DBaver".
 
-> **Links Úteis**:
->
-> - [Website com GitHub Pages](https://pages.github.com/)
-> - [Programação colaborativa com Repl.it](https://repl.it/)
-> - [Getting Started with Heroku](https://devcenter.heroku.com/start)
-> - [Publicando Seu Site No Heroku](http://pythonclub.com.br/publicando-seu-hello-world-no-heroku.html)
 
 ## Qualidade de Software
 
@@ -120,10 +111,3 @@ Para o nosso trabalho, vamos focar nas seguintes características para a constru
 |    | Acessibilidade | Avalia o grau em que o produto foi projetado para atender pessoas com características e capacidades diferenciadas |
 | Portabilidade   |   | Avalia o grau em que o software pode ser efetivamente e eficientemente transferido de um ambiente de hardware ou software para outro |
 |    | Facilidade de ser Instalado | Avalia a facilidade de se instalar o software   |
-
-
-> **Links Úteis**:
->
-> - [ISO/IEC 25010:2011 - Systems and software engineering — Systems and software Quality Requirements and Evaluation (SQuaRE) — System and software quality models](https://www.iso.org/standard/35733.html/)
-> - [Análise sobre a ISO 9126 – NBR 13596](https://www.tiespecialistas.com.br/analise-sobre-iso-9126-nbr-13596/)
-> - [Qualidade de Software - Engenharia de Software 29](https://www.devmedia.com.br/qualidade-de-software-engenharia-de-software-29/18209/)
