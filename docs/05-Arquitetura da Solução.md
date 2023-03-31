@@ -4,7 +4,7 @@
 
 Definição de como o software é estruturado em termos dos componentes que fazem parte da solução e do ambiente de hospedagem da aplicação.
 
-![Arquitetura da Solução](img/02-mob-arch.png)
+![image](https://user-images.githubusercontent.com/80654018/229249025-2af328b0-13a6-423b-9a9a-716eaa675c27.png)
 
 ## Processos de Negócios
 
