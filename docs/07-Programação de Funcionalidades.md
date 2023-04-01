@@ -5,7 +5,7 @@
 Link Expo Dev : https://snack.expo.dev/@eduardo7rr/app-pexinxa
 ### Organização do código (Eduardo , Fernando)
 O código foi separado em componentes, muito útil para a reutilização de códigos e rápidez na codificação.<br>
-![Org](img/Organization.png)<br>
+![Organizaçãodecodigo](img/Organization.png)<br>
 Comentários do time de desenvolvimento ( Eduardo, Fernando ) :<br>
 #### Eduardo : "Fiquei responsável pela criação de componentes para reutilização de código, além de facilitar a escrita e manutenibilidade do projeto. Ainda estou organizando todos os codigos em componentes.."
 #### Fernando : "Também estou responsável pela criação de componentes para facilitar o desenvolvimento da aplicação.."
