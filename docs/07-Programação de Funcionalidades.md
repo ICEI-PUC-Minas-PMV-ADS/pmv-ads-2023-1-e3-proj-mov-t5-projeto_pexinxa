@@ -22,6 +22,8 @@ Página para os usuários realizarem o login na aplicação, ou serem redirecion
 
 ### Bottom Navigation ( Navegação Inferior )
 Para maior acessibilidade e navegação na aplicação, foi implementado o 'BottomNavigation', que contém algumas das principais páginas que um usuário deve acessar.<br>
+- RF-15	A aplicação deve possuir um sacola de compra
+- RNF-05	O sistema deve ser fácil de usar e entender
 
 ![BottomNavigation](img/Navegation.png)
 ![BottomNavigation](img/BottomNavigation.png)
