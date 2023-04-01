@@ -1,6 +1,6 @@
 # Programação de Funcionalidades
 
-"Retrato" do estado atual das implementações já feitas na aplicação, referenciando a requisitos funcionais/ não funcionais e usando como base a arquitetura de solução e wireframes já criados pela equipe.  Também foi inserido a representação do estado atual de contribuições de toda a equipe de desenvolvimento.
+"Retrato" do estado atual das implementações já feitas na aplicação, referenciando a requisitos funcionais/ não funcionais e usando como base a arquitetura de solução e wireframes já criados pela equipe.  Também foi inserido a representação do estado atual de contribuições de todo o time de desenvolvimento.
 
 Link Expo Dev : https://snack.expo.dev/@eduardo7rr/app-pexinxa
 ### Organização do código
