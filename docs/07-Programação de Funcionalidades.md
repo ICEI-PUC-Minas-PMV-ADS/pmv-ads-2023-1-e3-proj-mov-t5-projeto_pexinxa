@@ -1,15 +1,32 @@
 # Programação de Funcionalidades
 
-<span style="color:red">Pré-requisitos: <a href="2-Especificação do Projeto.md"> Especificação do Projeto</a></span>, <a href="3-Projeto de Interface.md"> Projeto de Interface</a>, <a href="4-Metodologia.md"> Metodologia</a>, <a href="3-Projeto de Interface.md"> Projeto de Interface</a>, <a href="5-Arquitetura da Solução.md"> Arquitetura da Solução</a>
+"Retrato" do estado atual das implementações já feitas na aplicação, referenciando a requisitos funcionais/ não funcionais e usando como base a arquitetura de solução e wireframes já criados pela equipe.  Também foi inserido a representação do estado atual de contribuições de toda a equipe de desenvolvimento.
 
-Implementação do sistema descritas por meio dos requisitos funcionais e/ou não funcionais. Deve relacionar os requisitos atendidos os artefatos criados (código fonte) além das estruturas de dados utilizadas e as instruções para acesso e verificação da implementação que deve estar funcional no ambiente de hospedagem.
+Link Expo Dev : https://snack.expo.dev/@eduardo7rr/app-pexinxa
+### Organização do código
+O código foi separado em componentes, muito útil para a reutilização de códigos e rápidez na codificação.<br>
+![Org](img/Organization.png)
+### Página de Produtos
+Implementação da página de produtos, com filtro de buscas e seletores de produtos para a facilidade do usuário ao pesquisar.<br>
+- RF-04	A aplicação deve possuir um filtro para refinar a busca do usuário
+- RF-01	A aplicação deve apresentar a funcionalidade de buscador (search)
+- RF-02	A aplicação deve apresentar categorias de produtos para facilitar a busca dos usuários
+- RNF-05	O sistema deve ser fácil de usar e entender
+![Mercado](img/Mercado.png)
+## Página de Login
+Página para os usuários realizarem o login na aplicação, ou serem redirecionados para o cadastro.<br>
+- RF-05	A aplicação deve possuir uma área de login para que o usuário possa fazer suas compras
+- RF-07	A aplicação deve possuir uma área para cadastrar novos usuários e vendedores
+![Login](img/PaginaLogin1.png)
 
-Para cada requisito funcional, pode ser entregue um artefato desse tipo
 
-> **Links Úteis**:
->
-> - [Trabalhando com HTML5 Local Storage e JSON](https://www.devmedia.com.br/trabalhando-com-html5-local-storage-e-json/29045)
-> - [JSON Tutorial](https://www.w3resource.com/JSON)
-> - [JSON Data Set Sample](https://opensource.adobe.com/Spry/samples/data_region/JSONDataSetSample.html)
-> - [JSON - Introduction (W3Schools)](https://www.w3schools.com/js/js_json_intro.asp)
-> - [JSON Tutorial (TutorialsPoint)](https://www.tutorialspoint.com/json/index.htm)
+### Bottom Navigation ( Navegação Inferior )
+Para maior acessibilidade e navegação na aplicação, foi implementado o 'BottomNavigation', que contém algumas das principais páginas que um usuário deve acessar.<br>
+
+![BottomNavigation](img/Navegation.png)
+![BottomNavigation](img/BottomNavigation.png)
+
+## Backlog e Gestão de trabalho da equipe
+ Cada tarefa, cada comentário e atribuição do time ao projeto, está sendo feito dentro do backlog da aplicação. Local onde a equipe se organiza e divide todas as tarefas a serem feitas ou que já foram concluídas.<br>
+ Link para visualizar o quadro Backlog: https://github.com/orgs/ICEI-PUC-Minas-PMV-ADS/projects/249
+![GestaoDeTrabalho](img/Backlog_.png)
