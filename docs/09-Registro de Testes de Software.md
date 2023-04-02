@@ -1,8 +1,23 @@
 # Registro de Testes de Software
 
-<span style="color:red">Pré-requisitos: <a href="3-Projeto de Interface.md"> Projeto de Interface</a></span>, <a href="8-Plano de Testes de Software.md"> Plano de Testes de Software</a>
+<span style="color:red"> Plano de Testes de Software</a></span>
 
-Relatório com as evidências dos testes de software realizados no sistema pela equipe, baseado em um plano de testes pré-definido.
+Neste etapa foram realizados os testes referentes ao cadastro de usuários,Valor de horas e Atividades o gerenciamento da conta e o login. 
+
+|Caso de teste    | Requisito Associado  | Resultado |
+|------------|--------------------------------------------------------------------------------------------------------------------|----|
+|CT-01 – Cadastrar usuário| RF-07 - A aplicação deve possuir uma área para cadastrar novos usuários e vendedores. | Não foi possível testar pois funcionalidade ainda não foi implementada.  | 
+|CT-02 – Efetuar login| RF-05 - A aplicação deve possuir uma área de login para as vendedores fazer a gestão de suas vendas . <br> RF-06 - A aplicação deve possuir uma área de login para as vendedores fazer a gestão de suas vendas. | Não foi possível testar pois funcionalidade ainda não foi implementada.  |
+|CT-03 – Realizar busca| RF-01 - A aplicação deve apresentar a funcionalidade de buscador (search).<br> RF-04 A aplicação deve possuir um filtro para refinar a busca do usuário.  | [Clique aqui para ver o resultado](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e3-proj-mov-t5-projeto_pexinxa/blob/main/docs/img/Arquivos/Teste_Busca.gif)  |
+|CT-04 – Avaliar Estabelecimentos| RF-03 - A aplicação deve apresentar mecanismos para avaliação dos estabelecimentos através de comentário e notas .  | Não foi possível testar pois funcionalidade ainda não foi implementada.  |
+|CT-05 – Anunciar Produtos| RF-09 - A aplicação deve possuir um mecanismo de inclusão dos produtos disponívies dos vendedores.  | Não foi possível testar pois funcionalidade ainda não foi implementada.  |
+|CT-06 – Editar Anúncios| RF-14 - A aplicação deve permitir a edição dos dados do anúncio .  | Não foi possível testar pois funcionalidade ainda não foi implementada.  |
+|CT-07 – Perguntas e Respostas| RF-10 - A aplicação deve possuir um local de perguntas e resposta na descrição do produto.  | Não foi possível testar pois funcionalidade ainda não foi implementada.  |
+|CT-08 – Pós venda| RF-11 - A aplicação deve possuir um canal de comunicação entre compradores e vendedores para pós venda .  | Não foi possível testar pois funcionalidade ainda não foi implementada.  |
+|CT-09 – Suporte| RF-12 - A aplicação deve possuir um canal de comunicação direto com os administradores dentro da área de login de usuários.  | Não foi possível testar pois funcionalidade ainda não foi implementada.  |
+|CT-10 – Sacola de compra| RF-15 - A aplicação deve possuir um sacola de compra.  |Não foi possível testar pois funcionalidade ainda não foi implementada.  |
+|CT-11 – Status do pedido| RF-13 - A aplicação deve mostrar uma tela onde o cliente conseguirá visualizar o status do pedido  | Não foi possível testar pois funcionalidade ainda não foi implementada.  |
+
 
 ## Avaliação
 
