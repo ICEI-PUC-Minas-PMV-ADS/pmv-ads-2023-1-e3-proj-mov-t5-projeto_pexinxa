@@ -15,7 +15,7 @@ const App = () => {
   const [cidade, setCidade] = useState('');
   const [estado, setEstado] = useState('');
   const [pais, setPais] = useState('');
-  
+
   return (
     <View style={styles.container}>
       <Appbar.Header>
@@ -52,64 +52,69 @@ const App = () => {
         />
 
         <View>
-        <TextInput
-          style={styles.input}
-          keyboardType="numeric"
-          label="CEP"
-          value={cep}
-          onChangeText={(text) => setCep(text)}
-        />
-        <TextInput
-          style={styles.input}
-          keyboardType="numeric"
-          label="Rua"
-          value={rua}
-          onChangeText={(text) => setRua(text)}
-        />
-        <TextInput
-          style={styles.input}
-          keyboardType="numeric"
-          label="Número"
-          value={numero}
-          onChangeText={(text) => setNumero(text)}
-        />
-        <TextInput
-          style={styles.input}
-          label="Complemento"
-          value={complemento}
-          onChangeText={(text) => setComplemento(text)}
-        />
-        <TextInput
-          style={styles.input}
-          label="Bairro"
-          value={bairro}
-          onChangeText={(text) => setBairro(text)}
-        />
-        <TextInput
-          style={styles.input}          
-          label="Cidade"
-          value={cidade}
-          onChangeText={(text) => setCidade(text)}
-        />
-        <TextInput
-          style={styles.input}
-          label="Estado"
-          value={estado}
-          onChangeText={(text) => setEstado(text)}
-        />
-        <TextInput
-          style={styles.input}
-          label="Pais"
-          value={pais}
-          onChangeText={(text) => setPais(text)}
-        />
+          <TextInput
+            style={styles.input}
+            keyboardType="numeric"
+            label="CEP"
+            value={cep}
+            onChangeText={(text) => setCep(text)}
+          />
+          <TextInput
+            style={styles.input}
+            keyboardType="numeric"
+            label="Rua"
+            value={rua}
+            onChangeText={(text) => setRua(text)}
+          />
+          <TextInput
+            style={styles.input}
+            keyboardType="numeric"
+            label="Número"
+            value={numero}
+            onChangeText={(text) => setNumero(text)}
+          />
+          <TextInput
+            style={styles.input}
+            label="Complemento"
+            value={complemento}
+            onChangeText={(text) => setComplemento(text)}
+          />
+          <TextInput
+            style={styles.input}
+            label="Bairro"
+            value={bairro}
+            onChangeText={(text) => setBairro(text)}
+          />
+          <TextInput
+            style={styles.input}
+            label="Cidade"
+            value={cidade}
+            onChangeText={(text) => setCidade(text)}
+          />
+          <TextInput
+            style={styles.input}
+            label="Estado"
+            value={estado}
+            onChangeText={(text) => setEstado(text)}
+          />
+          <TextInput
+            style={styles.input}
+            label="Pais"
+            value={pais}
+            onChangeText={(text) => setPais(text)}
+          />
+          <TextInput
+            style={styles.input}
+            keyboardType="phone-pad"
+            label="Telefone"
+            value={pais}
+            onChangeText={(text) => setPais(text)}
+          />
         </View>
 
         <Button mode="contained" onPress={() => console.log('Pressed')}>
           Cadastrar
         </Button>
-
-        <Text style={styles.text}>{nome}</Text>
       </View>
     </View>
   );
@@ -133,4 +138,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default Cadastro;
+export default App;
