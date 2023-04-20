@@ -15,6 +15,7 @@ const App = () => {
   const [cidade, setCidade] = useState('');
   const [estado, setEstado] = useState('');
   const [pais, setPais] = useState('');
+  const [telefone, setTelefone] = useState('');
 
   return (
     <View style={styles.container}>
@@ -61,7 +62,6 @@ const App = () => {
           />
           <TextInput
             style={styles.input}
-            keyboardType="numeric"
             label="Rua"
             value={rua}
             onChangeText={(text) => setRua(text)}
@@ -107,8 +107,8 @@ const App = () => {
             style={styles.input}
             keyboardType="phone-pad"
             label="Telefone"
-            value={pais}
-            onChangeText={(text) => setPais(text)}
+            value={telefone}
+            onChangeText={(text) => setTelefone(text)}
           />
         </View>
 
