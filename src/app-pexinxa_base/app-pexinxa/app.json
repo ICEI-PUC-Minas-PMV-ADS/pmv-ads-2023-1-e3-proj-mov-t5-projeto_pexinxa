@@ -1,13 +1,13 @@
 {
   "expo": {
-    "name": "app-pexinxa",
-    "slug": "snack-92ef396f-9f37-44be-a055-7754939a2c5a",
+    "name": "drawer-pexinxa",
+    "slug": "snack-523dda78-1594-4902-bf89-287fde8d19d8",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/icon.png",
+    "icon": "./src/img/Logo_PX.png",
     "userInterfaceStyle": "light",
     "splash": {
-      "image": "./assets/splash.png",
+      "image": "./src/img/Logo_PX.png",
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
@@ -22,12 +22,12 @@
     },
     "android": {
       "adaptiveIcon": {
-        "foregroundImage": "./assets/adaptive-icon.png",
+        "foregroundImage": "./src/img/Logo_PX.png",
         "backgroundColor": "#FFFFFF"
       }
     },
     "web": {
-      "favicon": "./assets/favicon.png"
+      "favicon": "./src/img/Logo_PX.png"
     }
   }
 }
