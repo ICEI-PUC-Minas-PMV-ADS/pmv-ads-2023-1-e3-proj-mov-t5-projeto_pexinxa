@@ -7,9 +7,7 @@ const Database = {
 
     db.transaction((tx) => {
 
-      tx.executeSql('create table if not exists cadastro (nome text not null, cpf_cnpj text primary key not null, email text not null, senha text not null, uuid text not null)');
-
-      tx.executeSql('create table if not exists endereco (rua text not null, numero int not null, bairro text not null, cidade text not null, estado text not null, pais text not null, uuid text primary key not null)');
+      tx.executeSql('create table if not exists cadastro (nome text not null, doc text primary key not null, mail text not null, senha text not null, cep text not null, rua text not null, numero int not null, complemento text not null, bairro text not null, cidade text not null, estado text not null, telefone text not null, uuid text not null)');
 
       tx.executeSql('create table if not exists vendedor (cadastro int8 foreign key not null, endereco int8 foreing key not null, uuid text primary key not null)');
 
