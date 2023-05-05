@@ -8,7 +8,7 @@ export const getProduto = async () => {
 }
 
 export const insertProduto = async (params) => {
-  let results = await DB_EXEC(`insert into produto (descricao, preco, quantidade, data_cadastro, vendedor)
-  values(?,?,?,?)`, [params.descricao, params.preco, params.quantidade, params.data_cadastro, params.vendedor]);
+  let results = await DB_EXEC(`insert into produto (nome, descricao, preco, imagem, categoria, quantidade, data_cadastro, vendedor)
+  values(?,?,?,?)`, [params.nome, params.descricao, params.preco, params.imagem, params.categoria, params.quantidade, params.data_cadastro, params.vendedor]);
   return results.rowsAffected;
 }
