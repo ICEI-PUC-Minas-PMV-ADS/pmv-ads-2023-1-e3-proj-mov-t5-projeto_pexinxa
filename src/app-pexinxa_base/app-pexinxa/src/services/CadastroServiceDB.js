@@ -8,7 +8,7 @@ export const getCadastro = async () => {
 }
 
 export const insertCadastro = async (params) => {
-  let results = await DB_EXEC(`insert into cadastro (nome, cpf_cnpj, email, senha)
-  values(?,?,?,?)`, [params.nome, params.cpf_cnpj, params.email, params.senha]);
+  let results = await DB_EXEC(`insert into cadastro (nome, doc, mail, senha, cep, rua, numero, complemento, bairro, cidade, estado, telefone)
+  values(?,?,?,?)`, [params.nome, params.doc, params.mail, params.senha, params.dep, params.rua, params.numero, params.complemento, params.bairro, params.cidade, params.estado, params.telefone]);
   return results.rowsAffected;
 }
