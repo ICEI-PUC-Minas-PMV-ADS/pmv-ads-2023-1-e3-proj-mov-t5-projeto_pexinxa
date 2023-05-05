@@ -13,7 +13,7 @@ const Database = {
 
       tx.executeSql('create table if not exists consumidor (cadastro int8 foreign key not null, endereco int8 foreing key not null, uuid text primary key not null)');
 
-      tx.executeSql('create table if not exists produto (descricao text not null, preco int not null, quantidade int not null, data_cadastro date not null, vendedor int8 foreing key not null, uuid text primary key not null)');
+      tx.executeSql('create table if not exists produto (nome text not null, descricao text not null, preco int not null, categoria text not null, imagem text not null, quantidade int not null, data_cadastro date not null, vendedor int8 foreing key not null, uuid text primary key not null)');
 
       tx.executeSql('create table if not exists carrinho (produto int8 foreign key not null, quantidade_produto int not null, data_criacao date not null, vendedor int8 foreing key not null, uuid text primary key not null)');
 
