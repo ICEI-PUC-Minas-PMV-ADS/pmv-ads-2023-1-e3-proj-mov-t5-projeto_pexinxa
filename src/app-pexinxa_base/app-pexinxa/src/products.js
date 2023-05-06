@@ -1,4 +1,4 @@
-const Produtos = [
+const Products = [
   {
     id: 1,
     name: 'Celular',
@@ -49,4 +49,4 @@ const Produtos = [
   },
 ];
 
-export default Produtos;
+export default Products;
