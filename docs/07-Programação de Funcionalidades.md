@@ -57,8 +57,9 @@ Implementação da página de Cadastro, com buscador de rua, bairro, cidade e es
 - RF-07	A aplicação deve possuir uma área para cadastrar novos usuários e vendedores
 - RNF-05	O sistema deve ser fácil de usar e entender
 
-![Tela login 1](img/Tela_cadastro_1.jpg)
-![Tela login 2](img/Tela_cadastro_2.jpg)
+<img alt="Tela login 1" src="img/Tela_cadastro_1.jpg" width="500"  />
+
+<img alt="Tela login 2" src="img/Tela_cadastro_2.jpg" width="500"  />
 
 Comentários do time de desenvolvimento ( Fernando ) :<br>
 #### Fernando - "Fui o responsável para criar a tela de cadastro, coloquei os teclados devidos para cada campo, assim facilitará a inclusão dos dados. Foi feito também uma API para que quando o usuário entrar com o seu CEP, os dados da rua, bairro, cidade e estado será carregado automaticamente, evitando que a mesma rua seja inserida de formas diferente no banco de dados."
