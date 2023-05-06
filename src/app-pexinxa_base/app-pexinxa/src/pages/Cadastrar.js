@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { StyleSheet, ScrollView } from 'react-native';
 import { Appbar, TextInput, Button, Text } from 'react-native-paper';
 import {getCadastro, insertCadastro} from '../services/CadastroServiceDB';
+import {useNavigation} from '@react-navigation/native';
 
 const Cadastro = () => {
   
