@@ -4,6 +4,9 @@ import { Appbar, TextInput, Button, Text } from 'react-native-paper';
 import {getCadastro, insertCadastro} from '../services/CadastroServiceDB';
 
 const Cadastro = () => {
+  
+ // const navigation = useNavigation();
+  
   const [nome, setNome] = useState('');
   const [doc, setDoc] = useState('');
   const [mail, setMail] = useState('');
@@ -17,26 +20,10 @@ const Cadastro = () => {
   const [estado, setEstado] = useState('');
   const [telefone, setTelefone] = useState('');
   
- // const Cadastro = () => {
-//    
-//    const navigation = useNavigation();
-//    
-//    useEffect(() => {
-  
- //  insertCadastro(
-  //    {
-  //     nome: 'Letícia',
-  //     doc: '000000000-00'
-  //    }
-  // ).then((dados)=>{
- // 
- //   console.log(dados); 
- //   });
- //     getCadastro().then((dados)=>{
- // 
- //   console.log(dados); 
- //   });
- //     console.log('iniciando a tela');
+ // useEffect(() => {
+//   getCadastro().the((dados) => {
+//      setCadastro(dados);
+//    });
 //  },[]);
 
   const fetchAddress = async () => {
