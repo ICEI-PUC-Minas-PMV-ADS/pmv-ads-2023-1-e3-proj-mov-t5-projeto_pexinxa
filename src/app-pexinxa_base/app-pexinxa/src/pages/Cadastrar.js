@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { StyleSheet, ScrollView } from 'react-native';
 import { Appbar, TextInput, Button, Text } from 'react-native-paper';
+import {getCadastro, insertCadastro} from '../services/CadastroServiceDB';
 
 const Cadastro = () => {
   const [nome, setNome] = useState('');
@@ -15,6 +16,28 @@ const Cadastro = () => {
   const [cidade, setCidade] = useState('');
   const [estado, setEstado] = useState('');
   const [telefone, setTelefone] = useState('');
+  
+ // const Cadastro = () => {
+//    
+//    const navigation = useNavigation();
+//    
+//    useEffect(() => {
+  
+ //  insertCadastro(
+  //    {
+  //     nome: 'Letícia',
+  //     doc: '000000000-00'
+  //    }
+  // ).then((dados)=>{
+ // 
+ //   console.log(dados); 
+ //   });
+ //     getCadastro().then((dados)=>{
+ // 
+ //   console.log(dados); 
+ //   });
+ //     console.log('iniciando a tela');
+//  },[]);
 
   const fetchAddress = async () => {
     if (cep.length === 8) {
