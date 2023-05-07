@@ -1,15 +1,19 @@
-import { useContext } from 'react';
+import { useContext, useEffect, useState } from 'react';
 import { CartContext } from '../context/cart-context';
 
 import { Text, View, Image, StyleSheet, TouchableOpacity } from 'react-native';
 
-import {insertProduto, updateProduto, deleteProduto, getProduto} from '../services/ProdutoService';
-import {useNavigation} from '@react-navigation/native';
+import {
+  insertProduto,
+  updateProduto,
+  deleteProduto,
+  getProduto,
+} from '../services/ProdutoService';
+import { useNavigation } from '@react-navigation/native';
 
 const Product1 = () => {
-  
   const navigation = useNavigation();
-  
+
   const [nome, setNome] = useState('');
   const [descricao, setDescricao] = useState('');
   const [preco, setPreco] = useState('');
@@ -20,7 +24,7 @@ const Product1 = () => {
   const [vendedor, setVendedor] = useState('');
 
   useEffect(() => {
-    if(item){
+    if (item) {
       setNome(item.nome);
       setDescricao(item.descricao);
       setPreco(item.preco);
@@ -33,52 +37,41 @@ const Product1 = () => {
   }, [item]);
 
   const handleSalvar = () => {
-
-    if(item){
-
-      updateProduto(
-        {
-          nome: nome,
-          descricao: descricao,
-          preco: preco,
-          imagem: imagem,
-          categoria: categoria,
-          quantidade: quantidade,
-          data_cadastro: data_cadastro,
-          vendedor: vendedor,
-          id: item.id,
-        }).then();
-
+    if (item) {
+      updateProduto({
+        nome: nome,
+        descricao: descricao,
+        preco: preco,
+        imagem: imagem,
+        categoria: categoria,
+        quantidade: quantidade,
+        data_cadastro: data_cadastro,
+        vendedor: vendedor,
+        id: item.id,
+      }).then();
     } else {
-
-      insertProduto(
-        {
-
-          nome: nome,
-          descricao: descricao,
-          preco: preco,
-          imagem: imagem,
-          categoria: categoria,
-          quantidade: quantidade,
-          data_cadastro: data_cadastro,
-          vendedor: vendedor
-
-        }).then();
-
+      insertProduto({
+        nome: nome,
+        descricao: descricao,
+        preco: preco,
+        imagem: imagem,
+        categoria: categoria,
+        quantidade: quantidade,
+        data_cadastro: data_cadastro,
+        vendedor: vendedor,
+      }).then();
     }
 
     navigation.goBack();
   };
 
   const handleExcluir = () => {
-
     deleteProduto(item.id).then();
     navigation.goBack();
   };
-}
+};
 
 export default function Produto({ route, params }) {
-  
   const navigation = useNavigation();
 
   const [produto, setProduto] = useState([]);
@@ -87,9 +80,8 @@ export default function Produto({ route, params }) {
     getProduto().then((dados) => {
       setProduto(dados);
     });
-  },[]);
-  
-  
+  }, []);
+
   const { product } = route.params;
 
   const [state, dispatch] = useContext(CartContext);

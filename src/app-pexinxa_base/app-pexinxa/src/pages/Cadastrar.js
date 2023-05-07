@@ -1,13 +1,12 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { StyleSheet, ScrollView } from 'react-native';
 import { Appbar, TextInput, Button, Text } from 'react-native-paper';
-import {insertCadastro, updateCadastro} from '../services/CadastroServiceDB';
-import {useNavigation} from '@react-navigation/native';
+import { insertCadastro, updateCadastro } from '../services/CadastroServiceDB';
+import { useNavigation } from '@react-navigation/native';
 
 const Cadastro = () => {
-  
   const navigation = useNavigation();
-  
+
   const [nome, setNome] = useState('');
   const [doc, setDoc] = useState('');
   const [mail, setMail] = useState('');
@@ -20,9 +19,9 @@ const Cadastro = () => {
   const [cidade, setCidade] = useState('');
   const [estado, setEstado] = useState('');
   const [telefone, setTelefone] = useState('');
-  
- useEffect(() => {
-    if(x){
+
+  useEffect(() => {
+    if (x) {
       setNome(x.nome);
       setDoc(x.doc);
       setMail(x.mail);
@@ -53,61 +52,51 @@ const Cadastro = () => {
       }
     }
   };
-  
+
   const handleSalvar = () => {
-
-    if(x){
-      
-      updateCadastro(
-        {
-          mail: mail,
-          senha: senha,
-          cep: cep,
-          rua: rua,
-          numero: numero,
-          complemento: complemento,
-          bairro: bairro,
-          cidade: cidade,
-          estado: estado,
-          telefone: telefone,
-          id: x.id,
-        }).then();
-
+    if (x) {
+      updateCadastro({
+        mail: mail,
+        senha: senha,
+        cep: cep,
+        rua: rua,
+        numero: numero,
+        complemento: complemento,
+        bairro: bairro,
+        cidade: cidade,
+        estado: estado,
+        telefone: telefone,
+        id: x.id,
+      }).then();
     } else {
-
-      insertCadastro(
-        {
-
-          nome: nome,
-          doc: doc,
-          mail: mail,
-          senha: senha,
-          cep: cep,
-          rua: rua,
-          numero: numero,
-          complemento: complemento,
-          bairro: bairro,
-          cidade: cidade,
-          estado: estado,
-          telefone: telefone
-
-        }).then();
-
+      insertCadastro({
+        nome: nome,
+        doc: doc,
+        mail: mail,
+        senha: senha,
+        cep: cep,
+        rua: rua,
+        numero: numero,
+        complemento: complemento,
+        bairro: bairro,
+        cidade: cidade,
+        estado: estado,
+        telefone: telefone,
+      }).then();
     }
 
     navigation.goBack();
   };
 
   return (
-
     <ScrollView style={styles.container}>
       <Appbar.Header>
         <Appbar.Content title="Página de Cadastro" />
       </Appbar.Header>
 
       <ScrollView style={styles.body}>
-      <Text style={styles.titulo}>Insira os seus dados</Text>
-      <Text style={styles.text}> Dados Pessoais </Text>
+        <Text style={styles.titulo}>Insira os seus dados</Text>
+        <Text style={styles.text}> Dados Pessoais </Text>
         <TextInput
           style={styles.input}
           label="Nome completo"
@@ -141,7 +130,7 @@ const Cadastro = () => {
         <Text style={styles.text}>Endereço</Text>
         <ScrollView>
           <TextInput
-            style={styles.input}            
+            style={styles.input}
             keyboardType="numeric"
             label="CEP"
             value={cep}
@@ -186,7 +175,7 @@ const Cadastro = () => {
             onChangeText={(text) => setEstado(text)}
           />
           <TextInput
-            style={styles.input}            
+            style={styles.input}
             keyboardType="phone-pad"
             label="Telefone"
             value={telefone}
@@ -197,7 +186,11 @@ const Cadastro = () => {
         <Button mode="contained" onPress={() => console.log('Pressed')}>
           Cadastrar
         </Button>
-        <Button mode="contained" color='red' onPress={() => navigation.goBack()}>
+        <Button
+          mode="contained"
+          color="red"
+          onPress={() => navigation.goBack()}
+        >
           Voltar
         </Button>
       </ScrollView>
@@ -216,8 +209,7 @@ const styles = StyleSheet.create({
   input: {
     backgroundColor: '#fff',
     marginBottom: 8,
-    borderColor: "#ddd"
-    
+    borderColor: '#ddd',
   },
   titulo: {
     textAlign: 'center',
@@ -226,13 +218,12 @@ const styles = StyleSheet.create({
   },
   text: {
     textAlign: 'left',
-    marginTop:32,  
-    fontSize: 16, 
+    marginTop: 32,
+    fontSize: 16,
   },
 });
 
 export default Cadastro;
-
 
 // import { Text, Button } from 'react-native';
 

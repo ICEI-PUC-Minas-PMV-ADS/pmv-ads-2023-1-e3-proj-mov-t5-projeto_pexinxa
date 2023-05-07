@@ -1,4 +1,3 @@
-import * as React from 'react';
 import {
   Text,
   View,
@@ -8,21 +7,20 @@ import {
   ScrollView,
 } from 'react-native';
 import { CartContext } from '../context/cart-context';
-import { useContext, useState } from 'react';
+import { useContext, useState, useEffect } from 'react';
 import Produto from '../components/product';
 
-import {getProduto} from '../services/ProdutoService';
+import { getProduto } from '../services/ProdutoService';
 
 export default function Sacola() {
-  
   const [produto, setProduto] = useState([]);
 
   useEffect(() => {
     getProduto().then((dados) => {
       setProduto(dados);
     });
-  },[]);
-  
+  }, []);
+
   const [state, dispatch] = useContext(CartContext);
 
   const cartProducs = state.items;
