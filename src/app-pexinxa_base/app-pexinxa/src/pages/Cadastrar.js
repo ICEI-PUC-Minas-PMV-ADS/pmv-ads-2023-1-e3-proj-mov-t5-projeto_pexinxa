@@ -187,7 +187,7 @@ const Cadastro = () => {
           />
         </ScrollView>
 
-        <Button mode="contained" onPress={() => console.log('Pressed')}>
+        <Button style={styles.button} mode="contained" onPress={() => console.log('Pressed')}>
           Cadastrar
         </Button>
         <Button
@@ -224,6 +224,9 @@ const styles = StyleSheet.create({
     textAlign: 'left',
     marginTop: 32,
     fontSize: 16,
+  },
+  button: {
+    marginBottom: 8
   },
 });
 
