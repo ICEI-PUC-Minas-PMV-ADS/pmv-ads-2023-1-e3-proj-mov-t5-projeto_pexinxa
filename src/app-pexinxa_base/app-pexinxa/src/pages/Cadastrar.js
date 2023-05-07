@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
 import { StyleSheet, ScrollView } from 'react-native';
 import { Appbar, TextInput, Button, Text } from 'react-native-paper';
-import {getCadastro, insertCadastro} from '../services/CadastroServiceDB';
+import {insertCadastro, updateCadastro} from '../services/CadastroServiceDB';
 import {useNavigation} from '@react-navigation/native';
 
 const Cadastro = () => {
   
- // const navigation = useNavigation();
+  const navigation = useNavigation();
   
   const [nome, setNome] = useState('');
   const [doc, setDoc] = useState('');
@@ -21,11 +21,22 @@ const Cadastro = () => {
   const [estado, setEstado] = useState('');
   const [telefone, setTelefone] = useState('');
   
- // useEffect(() => {
-//   getCadastro().the((dados) => {
-//      setCadastro(dados);
-//    });
-//  },[]);
+ useEffect(() => {
+    if(x){
+      setNome(x.nome);
+      setDoc(x.doc);
+      setMail(x.mail);
+      setSenha(x.senha);
+      setCep(x.cep);
+      setRua(x.rua);
+      setNumero(x.numero);
+      setComplemento(x.complemento);
+      setBairro(x.bairro);
+      setCidade(x.cidade);
+      setEstado(x.estado);
+      setTelefone(x.telefone);
+    }
+  }, [x]);
 
   const fetchAddress = async () => {
     if (cep.length === 8) {
@@ -41,6 +52,50 @@ const Cadastro = () => {
         console.log(error);
       }
     }
+  };
+  
+  const handleSalvar = () => {
+
+    if(x){
+      
+      updateCadastro(
+        {
+          mail: mail,
+          senha: senha,
+          cep: cep,
+          rua: rua,
+          numero: numero,
+          complemento: complemento,
+          bairro: bairro,
+          cidade: cidade,
+          estado: estado,
+          telefone: telefone,
+          id: x.id,
+        }).then();
+
+    } else {
+
+      insertCadastro(
+        {
+
+          nome: nome,
+          doc: doc,
+          mail: mail,
+          senha: senha,
+          cep: cep,
+          rua: rua,
+          numero: numero,
+          complemento: complemento,
+          bairro: bairro,
+          cidade: cidade,
+          estado: estado,
+          telefone: telefone
+
+        }).then();
+
+    }
+
+    navigation.goBack();
   };
 
   return (
