@@ -120,12 +120,10 @@ const Cadastro = () => {
           label="E-mail"
           value={mail}
           onChangeText={(text) => setMail(text)}
-          leftIcon={{ type: 'font-awesome', name: 'chevron-left' }}
-        />
+         />
         <TextInput
           style={styles.input}
           secureTextEntry
-          //onFocus={<TextInput.Icon icon="eye" />}
           right={<TextInput.Icon icon="eye" />}
           label="Senha"
           value={senha}
