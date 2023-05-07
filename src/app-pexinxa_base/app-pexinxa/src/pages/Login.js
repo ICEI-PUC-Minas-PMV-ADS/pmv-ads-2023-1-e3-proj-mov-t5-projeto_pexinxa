@@ -5,8 +5,21 @@ import { TextInput, StyleSheet, Text, Button, View, Image, TouchableOpacity } fr
 
 import * as Animatable from 'react-native-animatable';
 
+import {getCadastro} from '../services/CadastroServiceDB';
+import {useNavigation} from '@react-navigation/native';
+
 const [state, dispatch] = useContext(AuthContext);
 const Login = () => {
+  
+  const navigation = useNavigation();
+
+  const [cadastro, setCadastro] = useState([]);
+
+  useEffect(() => {
+    getCadastro().then((dados) => {
+      setProduto(dados);
+    });
+  },[]);
   
   return (
     <View style={styles.container}>
