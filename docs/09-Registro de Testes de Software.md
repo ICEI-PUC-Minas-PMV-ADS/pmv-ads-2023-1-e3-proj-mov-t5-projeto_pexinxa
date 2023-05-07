@@ -14,8 +14,8 @@ Neste etapa foram realizados os testes referentes ao cadastro de usuários,Valor
 |CT-06 – Editar Anúncios| RF-14 - A aplicação deve permitir a edição dos dados do anúncio .  | Não foi possível testar pois funcionalidade ainda não foi implementada.  |
 |CT-07 – Perguntas e Respostas| RF-10 - A aplicação deve possuir um local de perguntas e resposta na descrição do produto.  | Não foi possível testar pois funcionalidade ainda não foi implementada.  |
 |CT-08 – Pós venda| RF-11 - A aplicação deve possuir um canal de comunicação entre compradores e vendedores para pós venda .  | Não foi possível testar pois funcionalidade ainda não foi implementada.  |
-|CT-09 – Suporte| RF-12 - A aplicação deve possuir um canal de comunicação direto com os administradores dentro da área de login de usuários.  | Não foi possível testar pois funcionalidade ainda não foi implementada.  |
-|CT-10 – Sacola de compra| RF-15 - A aplicação deve possuir um sacola de compra.  |Não foi possível testar pois funcionalidade ainda não foi implementada.  |
+|CT-09 – Suporte| RF-12 - A aplicação deve possuir um canal de comunicação direto com os administradores dentro da área de login de usuários.  | [Clique aqui para ver o resultado](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e3-proj-mov-t5-projeto_pexinxa/blob/main/docs/img/Arquivos/Suporte.gif).  |
+|CT-10 – Sacola de compra| RF-15 - A aplicação deve possuir um sacola de compra.  |[Clique aqui para ver o resultado](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e3-proj-mov-t5-projeto_pexinxa/blob/main/docs/img/Arquivos/Sacola.gif)  |
 |CT-11 – Status do pedido| RF-13 - A aplicação deve mostrar uma tela onde o cliente conseguirá visualizar o status do pedido  | Não foi possível testar pois funcionalidade ainda não foi implementada.  |
 
 
