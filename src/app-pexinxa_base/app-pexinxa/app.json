@@ -1,6 +1,6 @@
 {
   "expo": {
-    "name": "drawer-pexinxa",
+    "name": "app-pexinxa",
     "slug": "snack-523dda78-1594-4902-bf89-287fde8d19d8",
     "version": "1.0.0",
     "orientation": "portrait",
@@ -14,9 +14,7 @@
     "updates": {
       "fallbackToCacheTimeout": 0
     },
-    "assetBundlePatterns": [
-      "**/*"
-    ],
+    "assetBundlePatterns": ["**/*"],
     "ios": {
       "supportsTablet": true
     },
