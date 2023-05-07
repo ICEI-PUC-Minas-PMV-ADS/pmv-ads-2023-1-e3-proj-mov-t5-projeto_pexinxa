@@ -20,6 +20,10 @@ const Cadastro = () => {
   const [estado, setEstado] = useState('');
   const [telefone, setTelefone] = useState('');
 
+  /*
+  
+  Código ainda em desenvolvimento
+  
   useEffect(() => {
     if (x) {
       setNome(x.nome);
@@ -35,7 +39,7 @@ const Cadastro = () => {
       setEstado(x.estado);
       setTelefone(x.telefone);
     }
-  }, [x]);
+  }, [x]); */
 
   const fetchAddress = async () => {
     if (cep.length === 8) {
