@@ -1,15 +1,15 @@
 # Registro de Testes de Usabilidade
 
-Ao realizar o teste de usabilidade, o mesmo não foi concretizado, visto que para esta etapa seria necessário a funcionalidade de cadastro de usuário e login para acesso ao aplicativo. Porém as telas citadas encontram-se em fase de desenvolvimento e ainda não foram implementadas no projeto base apresentado na etapa “Programação de funcionalidades”.
+Ao realizar o teste de usabilidade, o mesmo não foi concretizado, para que o cadastro fosse realizado seria necessário a conectividade entre o banco de dados e a aplicação, porém a mesma não foi realizada com êxito. Ante o exposto, não foi possível realizar o cadastro de um novo usuário, consequentemente as próximas etapas do teste de usabilidade.
 
 Segue abaixo, vídeo demonstrativo da situação apresentada:
 <br/>
 
 
-https://user-images.githubusercontent.com/104038811/229379375-acb703fd-3701-4c4c-b1eb-93e761941c82.mov
 
-<br/>
-Como foi possível observar no vídeo, a funcionabilidade de cadastro e login ainda não estão em funcionamento, pois como citado no texto acima, estão em fase de desenvolvimento. Logo em seguida foi realizada a navegação pela tela de "Mercado" (onde serão mostrados os produtos anunciados) e pela tela de "Carrinho" (onde estarão os produtos selecionados para compra).
+
+https://user-images.githubusercontent.com/104038811/236703035-511558f3-271e-480d-b9f1-392629a8a33b.mp4
+
 
 <br/>
 <br/>
