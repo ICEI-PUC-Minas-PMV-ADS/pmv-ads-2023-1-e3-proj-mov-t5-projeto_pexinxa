@@ -4,7 +4,8 @@ import { NavigationContainer } from '@react-navigation/native';
 import Login from './pages/Login';
 import Cadastrar from './pages/Cadastrar';
 import Home from './pages/Home'; 
- import Produtos from './pages/Produtos';  
+ import Produtos from './pages/Produtos';
+import CadastrarProduto from './pages/CadastrarProduto';
 
 const Stack = createStackNavigator();
 
@@ -16,6 +17,7 @@ export default function AppNavigator() {
         <Stack.Screen name="Cadastrar" component={Cadastrar} />
         <Stack.Screen name="Home" component={Home} /> 
          <Stack.Screen name="Produtos" component={Produtos} />
+        <Stack.Screen name="CadastrarProduto" component={CadastrarProduto} />
       </Stack.Navigator>
     </NavigationContainer>
   );
