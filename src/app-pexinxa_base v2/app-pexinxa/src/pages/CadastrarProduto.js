@@ -1,28 +1,61 @@
-//import React from 'react';
-import React, { useState, useEffect } from 'react';
-import { StyleSheet, ScrollView, View } from 'react-native';
+import React, { useState, useEffect, useContext } from 'react';
+import { StyleSheet, ScrollView, View, Alert } from 'react-native';
 import { Appbar, TextInput, Button, Text } from 'react-native-paper';
 import { useNavigation } from '@react-navigation/native';
-
+import { registerProduct } from '../../database/db';
+import { AuthContext } from '../context/auth-context';
 
 const CadastrarProduto = () => {
-  
   const [nomeProduto, setNomeProduto] = useState('');
   const [valorProduto, setValorProduto] = useState('');
   const [categoria, setCategoria] = useState('');
   const [descricao, setDescricao] = useState('');
 
+  const [authState, dispatch] = useContext(AuthContext);
+  const navigation = useNavigation();
 
-  return (    
+  if (!authState.isLogin) {
+    return <Text>Você precisa estar logado para cadastrar produtos.</Text>;
+  }
+
+  const cadastrarProduto = async () => {
+    if (!nomeProduto || !valorProduto || !categoria || !descricao) {
+      Alert.alert(
+        'Cadastro de produtos falhou!',
+        'Verifique se todos os campos foram preenchidos corretamente.'
+      );
+      return;
+    }
+
+    try {
+      const idProdutoCadastrado = await registerProduct(
+        nomeProduto,
+        valorProduto,
+        categoria,
+        descricao
+      );
+      console.log('Produto cadastrado com sucesso. ID:', idProdutoCadastrado);
+
+      // Atualiza o estado isLogin para redirecionar o usuário para a home
+      dispatch({ type: 'user_login', payload: true });
+      navigation.navigate('Home');
+    } catch (error) {
+      Alert.alert(
+        'Erro!',
+        'Ocorreu um erro ao tentar cadastrar o produto.'
+      );
+      console.error('Erro ao cadastrar produto:', error);
+    }
+  };
+
+  return (
 
     <ScrollView style={styles.container}>
-
       <Appbar.Header>
           <Appbar.Content title="Novo Produto" />
       </Appbar.Header>
 
       <View style={styles.body}>
-
         <Button style={styles.botao} 
           title='Mudar Foto' 
           icon="camera-burst" 
@@ -82,30 +115,19 @@ const CadastrarProduto = () => {
           color='#A9A9A9'
           onPress={() => Alert.alert('adicionar foto')}
         />
-        <Button
-          title="Right button"
-          icon="gamepad-round" 
-          color='#A9A9A9'
-          onPress={() => Alert.alert('adicionar foto')}
-        />
       </View>
 
       <Button style={styles.cadastrar} 
         title='Cadastrar Produto'
         mode="contained"
         color='#A9A9A9'
-        onPress={() => console.log('Cadastrado')}>
+        onPress={cadastrarProduto}>
 
         <Text> Cadastrar Produto </Text>
       </Button>
-
-      </View>
-      
-    </ScrollView>
-
+    </View>
+  </ScrollView>
   );
-
-  
 }
 
 const styles = StyleSheet.create({
@@ -170,4 +192,3 @@ const styles = StyleSheet.create({
 });
 
 export default CadastrarProduto;
-

@@ -20,6 +20,24 @@ export const initDb = async () => {
   });
 };
 
+export const initProductsDb = async () => {
+  return new Promise((resolve, reject) => {
+    db.transaction((tx) => {
+      tx.executeSql(
+        'CREATE TABLE IF NOT EXISTS products (id INTEGER PRIMARY KEY AUTOINCREMENT, nomeProduto TEXT, valorProduto TEXT, categoria TEXT, descricao TEXT);',
+        [],
+        () => {
+          resolve();
+        },
+        (_, error) => {
+          console.error('Error creating products table:', error);
+          reject(error);
+        }
+      );
+    });
+  });
+};
+
 export const dropTable = async () => {
   return new Promise((resolve, reject) => {
     db.transaction((tx) => {
@@ -56,6 +74,24 @@ export const registerUser = async (nome, doc, mail, senha, cep, rua, numero, com
   });
 };
 
+export const registerProduct = async (nomeProduto, valorProduto, categoria, descricao) => {
+  return new Promise((resolve, reject) => {
+    db.transaction((tx) => {
+      tx.executeSql(
+        'INSERT INTO products (nomeProduto, valorProduto, categoria, descricao) VALUES (?, ?, ?, ?);',
+        [nomeProduto, valorProduto, categoria, descricao],
+        (_, { insertId }) => {
+          resolve(insertId);
+        },
+        (_, error) => {
+          console.error('Error inserting product:', error);
+          reject(error);
+        }
+      );
+    });
+  });
+};
+
 export const getUser = async (email, password) => {
   return new Promise((resolve, reject) => {
     db.transaction((tx) => {
@@ -71,6 +107,28 @@ export const getUser = async (email, password) => {
         },
         (_, error) => {
           console.error('Error getting user:', error);
+          reject(error);
+        }
+      );
+    });
+  });
+};
+
+export const getProduct = async (nomeProduto) => {
+  return new Promise((resolve, reject) => {
+    db.transaction((tx) => {
+      tx.executeSql(
+        'SELECT * FROM products WHERE nomeProduto = ?;',
+        [nomeProduto],
+        (_, { rows }) => {
+          if (rows.length > 0) {
+            resolve(rows._array);
+          } else {
+            resolve(null);
+          }
+        },
+        (_, error) => {
+          console.error('Error getting product:', error);
           reject(error);
         }
       );

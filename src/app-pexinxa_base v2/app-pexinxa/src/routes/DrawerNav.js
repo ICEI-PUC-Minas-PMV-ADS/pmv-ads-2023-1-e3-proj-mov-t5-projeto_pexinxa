@@ -1,19 +1,19 @@
+import React, { useContext } from 'react';
 import {
   createDrawerNavigator,
   DrawerToggleButton,
 } from '@react-navigation/drawer';
 import Icon from 'react-native-vector-icons/MaterialIcons';
-import CustomDrawer from '../components/customDrawer';
-
+import CustomDrawerContent from '../components/customDrawer';
 import Home from '../pages/Home';
 import Perfil from '../pages/Perfil';
 import FaleConosco from '../pages/FaleConosco';
 import Login from '../pages/Login';
+import CadastrarProduto from '../pages/CadastrarProduto'; // Importe a página CadastrarProduto corretamente
 
 const Drawer = createDrawerNavigator();
 
 import { AuthContext } from '../context/auth-context';
-import { useContext } from 'react';
 
 export default function DrawerNav() {
   const [state, dispatch] = useContext(AuthContext);
@@ -28,7 +28,7 @@ export default function DrawerNav() {
         headerRight: () => <DrawerToggleButton />,
       }}
       itemStyle={{ color: 'red' }}
-      drawerContent={(props) => <CustomDrawer {...props} />}
+      drawerContent={(props) => <CustomDrawerContent {...props} />}
     >
       <Drawer.Screen
         name="Home"
@@ -67,7 +67,6 @@ export default function DrawerNav() {
           drawerActiveTintColor: 'black',
         }}
       />
-      {}
       {!state.isLogin && (
         <Drawer.Screen
           name="Login"

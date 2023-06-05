@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import {
   View,
   Text,
@@ -7,8 +7,9 @@ import {
   ScrollView,
   TouchableOpacity,
   Image,
+  ActivityIndicator,
 } from 'react-native';
-
+import { initProductsDb, getProduct } from '../../database/db';
 import Produto from '../components/product';
 import Sacola from '../components/sacola';
 
@@ -16,21 +17,29 @@ import products from '../products';
 
 export default function Home({ navigation }) {
   const initialCategory = products.map((product) => product.category);
-  let filteredCategories = [...new Set(initialCategory)];
+  const filteredCategories = [...new Set(initialCategory)];
 
   const [search, setSearch] = useState('');
   const [categories, setCategories] = useState([...filteredCategories]);
   const [filteredProducts, setFilteredProducts] = useState([...products]);
 
   const [selectedCategory, setSelectedCategory] = useState('');
-
   const [isSearching, setIsSearching] = useState(false);
+  const [isDbInitialized, setIsDbInitialized] = useState(false);
 
   useEffect(() => {
-    if (search.length === 0) {
-      resetHome();
+    initializeDb();
+  }, []);
+
+  const initializeDb = async () => {
+    try {
+      await initProductsDb();
+      setIsDbInitialized(true);
+    } catch (error) {
+      console.error('Erro ao inicializar o banco de dados:', error);
+      // Trate o erro de acordo com sua necessidade
     }
-  }, [search]);
+  };
 
   const resetHome = () => {
     setIsSearching(false);
@@ -40,17 +49,30 @@ export default function Home({ navigation }) {
     setFilteredProducts([...products]);
   };
 
-  const handleSearch = () => {
+  const handleSearch = async () => {
     if (search.length === 0) {
       return;
     }
     setIsSearching(true);
-    const filtered = products.filter((product) =>
-      product.name.toLowerCase().includes(search.toLowerCase())
-    );
-    setFilteredProducts(filtered);
-    const categories = filtered.map((product) => product.category);
-    setCategories([...new Set(categories)]);
+
+    try {
+      if (!isDbInitialized) {
+        console.log('Aguarde, inicializando o banco de dados...');
+        return;
+      }
+
+      const productsFromDB = await getProduct(search);
+      console.log('Produtos encontrados:', productsFromDB);
+      const categoriesFromDB = [...new Set(productsFromDB.map((product) => product.category))];
+
+      setFilteredProducts(productsFromDB);
+      setCategories(categoriesFromDB);
+    } catch (error) {
+      console.error('Erro ao buscar produtos:', error);
+      // Trate o erro de acordo com sua necessidade
+    } finally {
+      setIsSearching(false);
+    }
   };
 
   const handleFilter = (category) => {
@@ -126,11 +148,15 @@ export default function Home({ navigation }) {
         <View style={styles.section}>
           <Text style={styles.sectionTitle}>Produtos em destaque:</Text>
 
-          <View style={styles.productsList}>
-            {filteredProducts.map((product) => (
-              <Produto key={product.id} size={'small'} product={product} />
-            ))}
-          </View>
+          {isSearching ? (
+            <ActivityIndicator style={styles.loadingIndicator} />
+          ) : (
+            <View style={styles.productsList}>
+              {filteredProducts.map((product) => (
+                <Produto key={product.id} size={'small'} product={product} />
+              ))}
+            </View>
+          )}
         </View>
       </ScrollView>
       <Sacola navigation={navigation} />
@@ -213,5 +239,8 @@ const styles = StyleSheet.create({
     flexWrap: 'wrap',
     marginTop: 10,
     justifyContent: 'center',
+  },
+  loadingIndicator: {
+    marginTop: 20,
   },
 });

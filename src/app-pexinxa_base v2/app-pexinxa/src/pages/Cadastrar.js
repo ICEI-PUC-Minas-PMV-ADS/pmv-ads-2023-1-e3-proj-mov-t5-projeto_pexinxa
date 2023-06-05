@@ -63,7 +63,7 @@ const handleRegister = () => {
   registerUser(nome, doc, mail, senha, cep, rua, numero, complemento, bairro, cidade, estado, telefone)
     .then(() => {
       Alert.alert('Cadastro realizado com sucesso!');
-      navigation.replace('Home');
+      navigation.replace('Login');
     })
     .catch(() => {
       Alert.alert('Erro ao realizar cadastro.');
