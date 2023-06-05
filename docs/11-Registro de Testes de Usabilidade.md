@@ -6,9 +6,17 @@ Segue abaixo, vídeo demonstrativo da situação apresentada:
 <br/>
 
 
-
-
 https://user-images.githubusercontent.com/104038811/236703035-511558f3-271e-480d-b9f1-392629a8a33b.mp4
+
+
+### Teste realizado para a etapa 4
+
+Ao realizar o teste de usabilidade, conseguimos cadastrar um usuário, mesmo que a ela não nos retornasse nenhuma mensagem de sucesso. Foi feito o login com o usuário cadastrado, mas os dados do usuário não apareciam na tela "Perfis".<br/>
+Ao realizar uma busca utilizando o campo para ele, não foi devolvido nenhuma resposta. Ao clicarmos em uma das categorias, somente os produtos cadastrados nela apareceu.<br/>
+Clicando em um desses produtos, a página dele abre com algumas informações. Inserindo o produto na sacola, ele aparece quando entramos na sacola, mas não conseguimos retirar esse produto da sacola.<br/>
+A página de cadastro de produto abre e conseguimos colocar as informações, mas não conseguimos inserir fotos. Ao clicar em cadastrar, não nos é apresentado uma resposta se o produto foi cadastrado ou não. Na página inicial, o produto não aparece.
+
+
 
 
 <br/>
