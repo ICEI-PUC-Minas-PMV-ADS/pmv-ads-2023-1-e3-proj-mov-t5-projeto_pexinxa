@@ -13,7 +13,7 @@ import * as Animatable from 'react-native-animatable';
 import { getUser } from '../../database/db';
 
 const Login = ({ navigation }) => {
-  console.log("Renderizando a página de Login...");
+  console.log('Renderizando a página de Login...');
   const [state, dispatch] = useContext(AuthContext);
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
@@ -49,7 +49,11 @@ const Login = ({ navigation }) => {
         />
       </View>
 
-      <Animatable.View delay={600} animation="fadeInUp" style={styles.containerForm}>
+      <Animatable.View
+        delay={600}
+        animation="fadeInUp"
+        style={styles.containerForm}
+      >
         <Animatable.Text animation="flipInY" delay={600} style={styles.title}>
           Pexinxa!{' '}
         </Animatable.Text>
@@ -59,6 +63,7 @@ const Login = ({ navigation }) => {
           style={styles.textUser}
           icon={'home'}
           placeholder="Insira seu email.."
+          placeholderTextColor={'#fff'}
           onChangeText={(text) => setEmail(text)}
           value={email}
         />
@@ -66,6 +71,7 @@ const Login = ({ navigation }) => {
         <TextInput
           style={styles.textUser}
           placeholder="Sua senha.."
+          placeholderTextColor={'#fff'}
           onChangeText={(text) => setPassword(text)}
           value={password}
           secureTextEntry
@@ -109,10 +115,11 @@ const styles = StyleSheet.create({
   },
   container: {
     flex: 1,
+    height: 'auto',
     backgroundColor: '#38a69d',
   },
   containerLogo: {
-    flex: 2,
+    flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
   },
@@ -135,8 +142,6 @@ const styles = StyleSheet.create({
   text: {
     textAlign: 'center',
     color: '#a1a1a1',
-    paddingStart: '5%,',
-    paddingEnd: '5%'
   },
   button: {
     backgroundColor: '#38a69d',

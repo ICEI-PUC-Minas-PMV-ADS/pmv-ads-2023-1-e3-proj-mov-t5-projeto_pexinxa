@@ -40,40 +40,38 @@ const CadastrarProduto = () => {
       dispatch({ type: 'user_login', payload: true });
       navigation.navigate('Home');
     } catch (error) {
-      Alert.alert(
-        'Erro!',
-        'Ocorreu um erro ao tentar cadastrar o produto.'
-      );
+      Alert.alert('Erro!', 'Ocorreu um erro ao tentar cadastrar o produto.');
       console.error('Erro ao cadastrar produto:', error);
     }
   };
 
   return (
-
     <ScrollView style={styles.container}>
-      <Appbar.Header>
-          <Appbar.Content title="Novo Produto" />
-      </Appbar.Header>
+      {/* <Appbar.Header>
+        <Appbar.Content title="Novo Produto" />
+      </Appbar.Header> */}
 
       <View style={styles.body}>
-        <Button style={styles.botao} 
-          title='Mudar Foto' 
-          icon="camera-burst" 
+        <Button
+          style={styles.botao}
+          title="Mudar Foto"
+          icon="camera-burst"
           mode="contained"
-          color='#A9A9A9'
-          onPress={() => console.log('Pressed')} />
+          color="#A9A9A9"
+          onPress={() => console.log('Pressed')}
+        />
         <Text style={styles.textimagem}>Foto Principal</Text>
 
-       <View style={styles.cadastro}>
+        <View style={styles.cadastro}>
           <Text style={styles.tituloInput}> Nome do Produto</Text>
-          <TextInput 
+          <TextInput
             style={styles.input}
             value={categoria}
             onChangeText={(text) => setCategoria(text)}
           />
 
           <Text style={styles.tituloInput}> Valor </Text>
-          <TextInput 
+          <TextInput
             style={styles.input}
             value={valorProduto}
             keyboardType="decimal-pad"
@@ -81,65 +79,65 @@ const CadastrarProduto = () => {
           />
 
           <Text style={styles.tituloInput}> Categoria </Text>
-          <TextInput 
+          <TextInput
             style={styles.input}
             value={nomeProduto}
             onChangeText={(text) => setNomeProduto(text)}
           />
 
           <Text style={styles.tituloInput}> Descrição </Text>
-          <TextInput 
+          <TextInput
             style={styles.inputDescricao}
             onChangeText={(text) => setDescricao(text)}
             value={descricao}
           />
+        </View>
+
+        <Text style={styles.tituloInput}> Fotos </Text>
+        <View style={styles.fixToText}>
+          <Button
+            title="Left button"
+            icon="camera-burst"
+            color="#A9A9A9"
+            onPress={() => Alert.alert('Adicionar foto')}
+          />
+          <Button
+            title="Right button"
+            icon="gamepad-round"
+            color="#A9A9A9"
+            onPress={() => Alert.alert('Adicionar foto')}
+          />
+          <Button
+            title="Right button"
+            icon="gamepad-round"
+            color="#A9A9A9"
+            onPress={() => Alert.alert('adicionar foto')}
+          />
+        </View>
+
+        <Button
+          style={styles.cadastrar}
+          title="Cadastrar Produto"
+          mode="contained"
+          color="#A9A9A9"
+          onPress={cadastrarProduto}
+        >
+          <Text> Cadastrar Produto </Text>
+        </Button>
       </View>
-
-      <Text style={styles.tituloInput}> Fotos </Text>
-       <View style={styles.fixToText}>
-        <Button
-          title="Left button"
-          icon="camera-burst"
-          color='#A9A9A9'
-          onPress={() => Alert.alert('Adicionar foto')}
-        />
-        <Button
-          title="Right button"
-          icon="gamepad-round" 
-          color='#A9A9A9'
-          onPress={() => Alert.alert('Adicionar foto')}
-        />
-        <Button
-          title="Right button"
-          icon="gamepad-round" 
-          color='#A9A9A9'
-          onPress={() => Alert.alert('adicionar foto')}
-        />
-      </View>
-
-      <Button style={styles.cadastrar} 
-        title='Cadastrar Produto'
-        mode="contained"
-        color='#A9A9A9'
-        onPress={cadastrarProduto}>
-
-        <Text> Cadastrar Produto </Text>
-      </Button>
-    </View>
-  </ScrollView>
+    </ScrollView>
   );
-}
+};
 
 const styles = StyleSheet.create({
-  container:{
-    flex:1, 
+  container: {
+    flex: 1,
     backgroundColor: '#FFF',
   },
-  body:{
-    backgroundColor: '#FFF', 
-    alignItems:'left', 
+  body: {
+    backgroundColor: '#FFF',
     paddingTop: 30,
-    padding: 20
+    padding: 20,
   },
   botao: {
     marginBottom: 8,
@@ -148,20 +146,20 @@ const styles = StyleSheet.create({
     width: 70,
     justifyContent: 'center',
     marginHorizontal: 110,
-    marginTop: 25
+    marginTop: 25,
   },
-  textimagem:{
+  textimagem: {
     fontSize: 20,
-    paddingLeft: 78
+    paddingLeft: 78,
   },
   cadastro: {
     fontSize: 24,
     paddingTop: 50,
   },
-  tituloInput:{
+  tituloInput: {
     //padding: 10
   },
-  input:{
+  input: {
     backgroundColor: '#DCDCDC',
     height: 30,
     marginVertical: 12,
@@ -169,26 +167,26 @@ const styles = StyleSheet.create({
     borderColor: '#ddd',
     //padding: 10
   },
-  inputDescricao:{
+  inputDescricao: {
     backgroundColor: '#DCDCDC',
     height: 70,
     marginVertical: 12,
     borderWidth: 1,
     borderColor: '#ddd',
   },
-   fixToText: {
+  fixToText: {
     flexDirection: 'row',
     justifyContent: 'space-between',
-    paddingTop: 18
+    paddingTop: 18,
   },
-  cadastrar:{
+  cadastrar: {
     //marginBottom: 8,
     marginVertical: 30,
     borderRadius: 100,
     height: 40,
     textAlign: 'center',
-    paddingTop: 5
-  }
+    paddingTop: 5,
+  },
 });
 
 export default CadastrarProduto;

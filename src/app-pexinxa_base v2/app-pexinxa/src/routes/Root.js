@@ -36,7 +36,13 @@ export default function Root() {
         <Stack.Screen
           name="CadastrarProduto"
           component={CadastrarProduto}
-          options={{ headerShown: false }}
+          options={{
+            title: 'Novo Produto',
+            headerStyle: {
+              backgroundColor: '#333',
+            },
+            headerTintColor: '#FFF',
+          }}
         />
       </Stack.Navigator>
     </NavigationContainer>
